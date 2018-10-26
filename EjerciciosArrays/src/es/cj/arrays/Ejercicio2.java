@@ -15,14 +15,16 @@ public class Ejercicio2 {
 		int numero = sc.nextInt();
 		System.out.println("Introduce el número a mostrar la posición: ");
 		int elegido = sc.nextInt();
-		int encontrado = 0;
 		int tabla [] = new int [numero];
 		for (int i = 0; i < tabla.length; i++) {
 			tabla[i] = new Random().nextInt(numero);
-			
+		}
+		Arrays.sort(tabla);
+		for (int i = 0; i < tabla.length; i++) {
 			System.out.print(tabla[i]+" ");
 		}
 		System.out.println();
+		
 		int busqueda = Arrays.binarySearch(tabla, elegido);
 		if (busqueda > 0) {
 			System.out.println("Su número se encuentra en la posición: "+busqueda);
