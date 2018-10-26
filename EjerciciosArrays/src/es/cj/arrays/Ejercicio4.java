@@ -16,38 +16,38 @@ public class Ejercicio4 {
 		System.out.print("Cantidad de números en la tabla : ");
 		int cantidad = sc.nextInt();
 		int numeros1 [] = new int [cantidad];
+		char abc [] = new char [26];
+		int num = 0;
+		int num1 = 0;
 		for (int i = 0; i < numeros1.length; i++) {
-			numeros1[i] = new Random().nextInt(cantidad);
+			numeros1[i] = num1;
+			num1 = num1 + 1;
 		}
-		
+		Arrays.toString(numeros1);
+		for (char a = 'A'; a <= 'Z'; a++) {
+			abc[num] = a;
+			num++;
+		}
+		Arrays.toString(abc);
 		int cont1 = 0;
 		int cont2 = 0;
-		
-		int numeros2 [] = new int [cantidad];
-		for (int i = 0; i < numeros2.length; i++) {
-			numeros2[i] = new Random().nextInt(cantidad);
-		}
-		
-		int maxima = numeros1.length + numeros2.length;
-		int nuevaT [] = new int [maxima];
-				
+		int total = numeros1.length + abc.length;
+		int nuevaT [] = new int [total];
 		for (int i = 0; i < nuevaT.length; i++) {
-			if(i%2==0) {
-				nuevaT[i]=numeros1[cont1];
-				cont1+=1;
-			}else if(i%2==1) {
-				nuevaT[i]=numeros2[cont2];
-				cont2+=1;
-			}
+			nuevaT[i] = numeros1[cont1] + abc[cont2];
+			cont1++;
+			cont2++;
 		}
+				
+		
 		System.out.println("Tabla primera");
 		for (int i = 0; i < numeros1.length; i++) {
 			System.out.print(numeros1[i]+" ");
 		}
 		System.out.println(" ");
 		System.out.println("Tabla segunda");
-		for (int i = 0; i < numeros2.length; i++) {
-			System.out.print(numeros2[i]+" ");
+		for (int i = 0; i < abc.length; i++) {
+			System.out.print(abc[i]+" ");
 		}
 		System.out.println();
 		System.out.println("Tabla aleatoria");
