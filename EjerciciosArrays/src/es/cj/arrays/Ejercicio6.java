@@ -14,9 +14,8 @@ public class Ejercicio6 {
 		 */
 		System.out.println("Inserte el número de valores de la tabla: ");
 		int numero  = sc.nextInt();
-		
+		int cont = 0;
 		int tabla [] = new int [numero];
-		int tabla1 [] = new int [numero - 1];
 		int num = 0;
 		System.out.println("Inserte el número a eliminar: ");
 		int borrado = sc.nextInt();
@@ -24,8 +23,15 @@ public class Ejercicio6 {
 			tabla[i] = new Random().nextInt(10);
 			}
 		for (int i = 0; i < tabla.length; i++) {
+			if (tabla[i] == borrado) {
+				cont++;
+			}
+			if (cont == 1) {
+				
+			}
 			
+		}
+
 		}
 		}
 	}
-}
