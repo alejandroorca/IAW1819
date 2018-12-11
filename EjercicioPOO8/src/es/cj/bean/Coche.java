@@ -64,8 +64,8 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [anyo_fabricacion=" + anyo_fabricacion + ", velocidad=" + velocidad + ", precio=" + precio
-				+ ", nombre=" + nombre + ", marca=" + marca + "]";
+		return "Coche: Año de fabricación: " + anyo_fabricacion + ", velocidad máxima: " + velocidad + ", precio: " + precio
+				+ ", nombre: " + nombre + ", marca: " + marca + ".";
 	}
 
 	@Override

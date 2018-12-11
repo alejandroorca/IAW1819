@@ -40,37 +40,47 @@ public class CocheDAOLista implements CocheDAO {
 	}
 
 	@Override
-	public Coche borrar(String nombre, String marca) {
+	public void borrar(String nombre, String marca) {
 		for (Coche coche : catalogo) {
-			if (condition) {
-				
+			if (coche.equals(nombre) && coche.equals(marca)) {
+				catalogo.remove(coche);
+			}
+		}
+	}
+
+	@Override
+	public void borrarTodos() {
+		for (Coche coche : catalogo) {
+			catalogo.remove(coche);
+		}
+
+	}
+
+	@Override
+	public String buscarCochePrecio(double precio) {
+		for (Coche coche : catalogo) {
+			if (coche.equals(precio)) {
+			return	catalogo.toString();
 			}
 		}
 		return null;
 	}
 
 	@Override
-	public void borrarTodos() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Coche buscarCochePrecio(double precio) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Coche buscarCochesFechasFabric(int anyo_ini, int anyo_fin) {
-		// TODO Auto-generated method stub
+	public String buscarCochesFechasFabric(int anyo_ini, int anyo_fin) {
+		for (Coche coche : catalogo) {
+			if (anyo_ini <= anyo_fin) {
+			return	catalogo.toString();
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public void listar() {
-		// TODO Auto-generated method stub
-
+		for (Coche coche : catalogo) {
+			System.out.println(coche);
+		}
 	}
 
 }

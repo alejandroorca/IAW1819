@@ -13,7 +13,7 @@ public class Principal {
 		
 		Palabra p1 = new Palabra("Hola", "Saludo formal");
 		
-		Palabra p2 = new Palabra("Aidós", "Despedida formal");
+		Palabra p2 = new Palabra("Adiós", "Despedida formal");
 		
 		pDAO.anadir(p1);
 		pDAO.anadir(p2);
