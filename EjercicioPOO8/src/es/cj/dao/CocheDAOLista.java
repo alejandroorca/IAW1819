@@ -42,7 +42,7 @@ public class CocheDAOLista implements CocheDAO {
 	@Override
 	public void borrar(String nombre, String marca) {
 		for (Coche coche : catalogo) {
-			if (coche.equals(nombre) && coche.equals(marca)) {
+			if (coche.getNombre().equals(nombre) && coche.getMarca().equals(marca)) {
 				catalogo.remove(coche);
 			}
 		}
@@ -50,16 +50,15 @@ public class CocheDAOLista implements CocheDAO {
 
 	@Override
 	public void borrarTodos() {
-		for (Coche coche : catalogo) {
-			catalogo.remove(coche);
-		}
+			catalogo.removeAll(catalogo);
+		
 
 	}
 
 	@Override
 	public String buscarCochePrecio(double precio) {
 		for (Coche coche : catalogo) {
-			if (coche.equals(precio)) {
+			if (coche.getPrecio()==precio) {
 			return	catalogo.toString();
 			}
 		}
@@ -69,7 +68,7 @@ public class CocheDAOLista implements CocheDAO {
 	@Override
 	public String buscarCochesFechasFabric(int anyo_ini, int anyo_fin) {
 		for (Coche coche : catalogo) {
-			if (anyo_ini <= anyo_fin) {
+			if (coche.getAnyo_fabricacion()>=anyo_ini && coche.getAnyo_fabricacion()<=anyo_fin ) {
 			return	catalogo.toString();
 			}
 		}

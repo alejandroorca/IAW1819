@@ -24,10 +24,11 @@ public class Main {
 		
 		cDAO.borrar("Audi RS 5 Coupé", "Audi");
 		
+		cDAO.borrarTodos();
 		
 		cDAO.listar();
 		
-
+		
 
 	}
 
