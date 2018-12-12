@@ -20,11 +20,10 @@ public class Main {
 		cDAO.actualizarVelocidad(c1, 300);
 		System.out.println(cDAO.buscarCochePrecio(99.36));
 		
-		System.out.println(cDAO.buscarCochesFechasFabric(2017, 2019));
+		System.out.println(cDAO.buscarCochesFechasFabric(2016, 2017));
 		
 		cDAO.borrar("Audi RS 5 Coupé", "Audi");
 		
-		cDAO.borrarTodos();
 		
 		cDAO.listar();
 		

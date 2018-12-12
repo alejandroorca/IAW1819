@@ -59,7 +59,7 @@ public class CocheDAOLista implements CocheDAO {
 	public String buscarCochePrecio(double precio) {
 		for (Coche coche : catalogo) {
 			if (coche.getPrecio()==precio) {
-			return	catalogo.toString();
+			return	coche.toString();
 			}
 		}
 		return null;
@@ -69,7 +69,7 @@ public class CocheDAOLista implements CocheDAO {
 	public String buscarCochesFechasFabric(int anyo_ini, int anyo_fin) {
 		for (Coche coche : catalogo) {
 			if (coche.getAnyo_fabricacion()>=anyo_ini && coche.getAnyo_fabricacion()<=anyo_fin ) {
-			return	catalogo.toString();
+				return	coche.toString();
 			}
 		}
 		return null;
